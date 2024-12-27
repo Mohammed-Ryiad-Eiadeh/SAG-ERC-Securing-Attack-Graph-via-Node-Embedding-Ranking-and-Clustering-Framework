@@ -47,6 +47,7 @@ The motivation behind this resource allocation strategy is to prioritize the pro
     
 5) Assess SAG-ERC across four systems and compare its performance with four baseline resource allocation methods.  
 
+# Benchmark Datasets
 For our assessment, we used four distinct attack graphs, each symbolizing a different interdependent system and network structure. These datasets include attack graphs from real-world interconnected systems, namely DER.1, SCADA, E-commerce, and VOIP. Signifies an attack step, and we consider every edge to be directional. 
 
 | System | # Nodes | # Edges | # Critical Assets | Graph Type |
