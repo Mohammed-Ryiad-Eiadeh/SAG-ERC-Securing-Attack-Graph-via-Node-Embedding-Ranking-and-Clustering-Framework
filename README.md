@@ -24,6 +24,18 @@ $F_2(P) = \max_{P \in P_m} \big(\exp\big(-\sum_{(v_i,v_j)\in P} {x_{i,j}}\big) +
    
 This function accounts for the total asset loss that the system will lose if the attack is occured successfully.
 
+# Random Walk, Negative Sampling, and Gradient Descent for Node Embedding
+Node embedding transforms a node into a \(d\)-dimensional vector, capturing its structural properties for easier analysis, which simplifies tasks like node classification, prediction, and community detection. In the context of attack graphs, the goal is to project critical asset nodes into a \(d\)-dimensional vector space, capturing their structural characteristics. The log-likelihood objective function aims to maximize the likelihood of neighboring nodes appearing together in random walks, refining the embeddings by positioning closely related nodes nearer in the vector space. To address the computational challenges in large-scale graphs, negative sampling is employed, approximating the normalization term by selecting a small subset of nodes, typically 5–20 negative samples. In SAG-ERC, all asset nodes are specifically considered as negative sample nodes, generating both positive and negative samples efficiently. The embeddings are optimized using stochastic gradient descent (SGD), updating the vectors based on the gradient at each epoch.
+
+# KMeans Clustering
+K-means clustering is an unsupervised algorithm that divides a set data points into $K$ distinct clusters. Each data point is assigned to the cluster with the closest mean. The algorithm creates $K$ groups, each centered around a mean value, and ensures that the clusters are well-separated by a large distance. In this study, we use K-means to cluster different nodes based on their aforementioned embeddings. Here, the distance is calculated using the Manhattan distance.
+
+# TrustRank
+TrustRank is a linkage analysis algorithm designed to identify useful web pages and distinguish them from spam, improving search engine rankings. Unlike PageRank, which only considers link structure, TrustRank incorporates page quality by simulating an imaginary surfer who prefers higher-quality links. The algorithm uses a damping factor to control the likelihood of following links, and it propagates trust across the graph by adjusting node rankings iteratively. The rankings are updated based on a combination of the link structure and an initial seed vector, which is set according to asset loss for asset nodes and to a constant value for non-asset nodes. This process helps identify more reliable and valuable nodes within the network.
+
+# Main Motivation
+The motivation behind this resource allocation strategy is to prioritize the protection of critical assets within a system by focusing on clusters with higher risk levels. Assets are ranked based on their importance within the graph, and only those with potential financial losses in the event of a breach are considered. By normalizing the ranks within each cluster according to the severity of each cluster, the strategy ensures that the resource allocation is proportional to both the risk associated with the cluster and the importance (rank) of the asset. This method emphasizes safeguarding assets that are more vulnerable to attack by assigning resources based on their relative risk and importance within the network.
+
 # Our Contribution
 1) Introduce a novel resource allocation method tailored for interdependent systems, shaping decision-making processes for system security.
    
