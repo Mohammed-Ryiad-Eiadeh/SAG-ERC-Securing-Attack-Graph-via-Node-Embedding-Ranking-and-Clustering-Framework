@@ -318,10 +318,11 @@ public class AllocationApproaches {
                     break;
                 }
             }
-
             // Get the normalized cluster risk
             double clusterImportanceUponNormalizedRisk = mapClusterToRisk.get(cluster);
+            // Get the parents of this asset
             ArrayList<Integer> parents = nodes.get(assetNode);
+            // Update the investments based on the two level normalization (cluster risk-level and asset rank level)
             for (Integer nod : parents) {
                 Defenders edge = defendersMatrix[nod - 1][assetNode - 1];
                 int sizeParents = nodes.get(assetNode).stream().toList().size();
