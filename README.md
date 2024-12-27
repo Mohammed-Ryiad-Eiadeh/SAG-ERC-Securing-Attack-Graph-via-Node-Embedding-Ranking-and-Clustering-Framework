@@ -81,3 +81,63 @@ Note: all of these datasets are stored in the project directory and is called dy
 
 **Note**: The benefits of our defense strategies apply across different security budgets.
 
+# Comparison of AARA-PR and baseline systems on all datasets
+
+The row "Measurements" show the relative difference of the expected cost $CR$ for all defense scenarios. The larger $CR$, the better the defense method with significance level equals 0.05 for the Friedman test.
+
+** A Comparison (based on relative reduction in expected cost \(CR \%\)) between SAG-ERC and four baseline algorithms.**
+
+**SAG-ERC yields superior performance with the highest mean rank and highest relative reduction in expected cost.**
+
+| **System**          | **SAG-ERC** | **Defense in Depth** | **Behavioral Defender** | **Min-Cut** | **Risk-Based** |
+|----------------------|-------------|-----------------------|--------------------------|-------------|----------------|
+| SCADA               | **86.49**   | 63.212               | 61.03                   | 80.96       | 61.00          |
+| DER.1               | **89.59**   | 46.474               | 50.17                   | 47.82       | 50.01          |
+| E-Comm              | **79.13**   | 46.474               | 50.59                   | 46.19       | 50.39          |
+| VOIP                | **84.32**   | 43.528               | 44.43                   | 69.24       | 46.00          |
+| **Rank First**       | **4**       | 0                     | 0                        | 0           | 0              |
+| **Sum of Ranks**     | **16**      | 7                     | 12                       | 11          | 10             |
+| **Mean Rank**        | **4**       | 1.75                  | 3.00                     | 2.75        | 2.50           |
+
+# Conclusion
+This study introduces a new resource allocation strategy for interdependent system security, focusing on decision-making impacts. We modeled vulnerabilities using attack graphs and proposed a method that prioritizes edges through in-Degree Defense. By adapting random walk with negative sampling and gradient descent, nodes are transformed into feature sets and grouped using KMeans clustering. The risk levels of clusters and assets' ranks are normalized, with resources allocated proportionally to these normalized ratios on the incoming edges of each asset. Our method, demonstrating low sensitivity to varying attacks, and is evaluated across four real-world systems and compared with four existing techniques, showcasing its superior effectiveness. \name proves to be a robust security allocation method, and we offer an open-source implementation for further customization.
+
+# How To Run The Code (read carefully please)
+
+1) Download intellIJ IDEA latest version
+2) Dounload JDK 17 or higher
+3) Set up the environment variable for the bin folder of the JDK 17+
+4) Open the IDEA
+5) Open the project
+6) Make sure you are connected to the internet
+7) Wait while the IDEA download all the libraries that are included as dependencies in the pom XML file
+8) Go to the main file (here you will get 3 files that are executable (have "psvm" method)) so these files are as follows:
+
+   a) BehavioralDefenderMain: this class is used to run a behavioral defender based on prospect theory for allocating the resourcess.
+
+   b) DefenseInDepthMain: this class is used to allocate the resourcess equally over all edges of the given graph.
+
+   c) PageRankWithInDegreeMain: this class is used to run AARA-PR which uses PageRank to rank the assets considering the losess and propagating the resourcess on the in-degree edges of each asset.
+
+9) Set up the desired hyperparameters
+10) Run the file to see the results.
+   
+# References
+
+[12] A. R. Hota, A. Clements, S. Sundaram, and S. Bagchi. 2016. Optimal and game-theoretic deployment of security investments in interdependent assets. In International Conference on Decision and Game Theory for Security. 101–113.
+
+[13] S. Jauhar, B. Chen, W. G. Temple, X. Dong, Z. Kalbarczyk, W. H. Sanders, and D. M. Nicol. 2015. Model-based cybersecurity assessment with nescor smart grid failure scenarios. In Dependable Computing (PRDC), 2015 IEEE 21st Pacific Rim International Symposium on. IEEE, 319–324.
+
+[14] G. Modelo-Howard, S. Bagchi, and G. Lebanon. 2008. Determining placement of intrusion detectors for a distributed application through bayesian network modeling. In International Workshop on Recent Advances in Intrusion Detection. Springer, 271–290.
+
+# Contact With Authors
+
+Send email to the following authors for any question about this work, and it is our pleasure to ansawer your question.
+
+Mohammad Aleiadeh, mraleiad@iu.edu or maleiade@purdue.edu
+
+dr. Mustafa Abdallah, mabdall@iu.edu or abdalla0@purdue.edu
+
+Note: Authors are arranged alphabetically.
+
+
