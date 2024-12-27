@@ -115,7 +115,6 @@ The row "Measurements" show the relative difference of the expected cost $CR$ fo
 This study introduces a new resource allocation strategy for interdependent system security, focusing on decision-making impacts. We modeled vulnerabilities using attack graphs and proposed a method that prioritizes edges through in-Degree Defense. By adapting random walk with negative sampling and gradient descent, nodes are transformed into feature sets and grouped using KMeans clustering. The risk levels of clusters and assets' ranks are normalized, with resources allocated proportionally to these normalized ratios on the incoming edges of each asset. Our method, demonstrating low sensitivity to varying attacks, and is evaluated across four real-world systems and compared with four existing techniques, showcasing its superior effectiveness. \name proves to be a robust security allocation method, and we offer an open-source implementation for further customization.
 
 # How To Run The Code (read carefully please)
-
 1) Download intellIJ IDEA latest version
 2) Dounload JDK 17 or higher
 3) Set up the environment variable for the bin folder of the JDK 17+
@@ -123,16 +122,13 @@ This study introduces a new resource allocation strategy for interdependent syst
 5) Open the project
 6) Make sure you are connected to the internet
 7) Wait while the IDEA download all the libraries that are included as dependencies in the pom XML file
-8) Go to the main file (here you will get 3 files that are executable (have "psvm" method)) so these files are as follows:
+8) Go to the main file (here you will get 2 files that are executable (have "psvm" method)) so these files are as follows:
 
-   a) BehavioralDefenderMain: this class is used to run a behavioral defender based on prospect theory for allocating the resourcess.
+   a) MainClassEmbedding class: run this class first to generate the embedding for all attack graph you have in the dataset
 
-   b) DefenseInDepthMain: this class is used to allocate the resourcess equally over all edges of the given graph.
-
-   c) PageRankWithInDegreeMain: this class is used to run AARA-PR which uses PageRank to rank the assets considering the losess and propagating the resourcess on the in-degree edges of each asset.
-
-9) Set up the desired hyperparameters
-10) Run the file to see the results.
+   b)ResourceAllocationMain: once you have the embeddings, run the resource allocation to get the final results as they store in a .CSV file.
+   
+10) Set up the desired hyperparameters for each object inside each class
    
 # References
 
