@@ -1,1 +1,5 @@
 # SAG-ERC: Securing Attack-Graph-based Systems through Node Embedding, Ranking, and Clustering
+
+# Abstract
+Securing interdependent systems (where a successful attack on an asset can lead to the compromise of other assets in the system) is a challenging task.
+This paper introduces a security framework for these interdependent systems managed by a single defender. Using attack graphs to model vulnerabilities, we propose a resource allocation strategy that prioritizes edges through in-degree nodes. We apply a random walk embedding algorithm to project nodes into feature vectors, followed by KMeans clustering to group similar nodes and calculate the severity risk of each cluster. We also use TrustRank algorithm to evaluate asset influence. Resources are then allocated based on normalized cluster risks and node ranking scores. Our method outperforms existing resource allocation algorithms across four real-world systems, supported by statistical validation. The implementation source code is available for further development.
