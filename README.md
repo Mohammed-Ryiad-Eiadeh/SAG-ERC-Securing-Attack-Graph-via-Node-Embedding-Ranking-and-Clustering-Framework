@@ -35,5 +35,49 @@ This function accounts for the total asset loss that the system will lose if the
     
 5) Assess SAG-ERC across four systems and compare its performance with four baseline resource allocation methods.  
 
+For our assessment, we used four distinct attack graphs, each symbolizing a different interdependent system and network structure. These datasets include attack graphs from real-world interconnected systems, namely DER.1, SCADA, E-commerce, and VOIP. Signifies an attack step, and we consider every edge to be directional. 
 
+| System | # Nodes | # Edges | # Critical Assets | Graph Type |
+| --- | --- | --- | --- | --- |
+| SCADA [12] | 13 | 20 | 6 | Directed |
+| DER.1 [13] | 22 | 32 | 6 | Directed |
+| E-Commerce [14] | 20 | 32 | 4 | Directed |
+| VOIP [14] | 22 | 35 | 4 | Directed |
+
+Note: all of these datasets are stored in the project directory and is called dynamically so no need to set up their paths.
+
+# Parameter Configuration of Our Experiments
+- **Genetic Algorithm (GA) Hyperparameters**:  
+  - Maximum number of iterations: `M = 100`  
+  - Population size: `N = 500`  
+  - Crossover probability: `m_p = 0.4`  
+  - Mutation rate: `m_r = 0.2`  
+  - Selection probability: `s_p = 0.6`  
+  - Weight factor for fitness function: `W_f = 0.001`  
+
+- **Defender's Security Budget**:  
+  - `S = 20`  
+
+- **Embedding Parameters**:  
+  - Dimension size: `d_s = 256`  
+  - Maximum number of hops: `m_h = 100`  
+  - Number of epochs: `epochs = 150`  
+  - Learning rate: `λ = 0.01`  
+
+- **KMeans Clustering**:  
+  - Number of clusters: `K = 3`  
+  - Maximum number of epochs: `K_epochs = 100`  
+
+- **TrustRank Hyperparameters**:  
+  - Number of iterations: `TR_iter = 100`  
+  - Epsilon: `ε = 0.00001`  
+  - Weight factor: `W_f^0 = 0.01`  
+
+- **Behavioral Defender Baseline**:  
+  - Behavioral level: `a = 0.5`  
+
+- **Initial Edge Weights**:  
+  - Randomly generated values between `0` and `1`.  
+
+**Note**: The benefits of our defense strategies apply across different security budgets.
 
