@@ -9,5 +9,27 @@ Our proposed framework, SAG-ERC, addresses resource allocation challenges in int
 
 ![Screenshot (20)](https://github.com/user-attachments/assets/809026b8-e47c-4185-8f9d-2347748ac9ce)
 
+# Fitness Function
+$F_2(P) = \max_{P \in P_m} \big(\exp\big(-\sum_{(v_i,v_j)\in P} {x_{i,j}}\big) + Wf\sum_{v_m\in P} L_m\big).$
+   
+   $P$ is the given attack path.
+
+   $P_m$ is a set of attack paths.
+
+   $v_i,v_j$ are the nodes in $P$.
+
+   $L_m$ is the loss corresponding to node $v_m$
+
+   $Wf$ is the weight factor lies in [0,1]
+   
+This function accounts for the total asset loss that the system will lose if the attack is occured successfully.
+
+# Our Contribution
+- Introduce a novel resource allocation method tailored for interdependent systems, shaping decision-making processes for system security.  
+- Adopt the random walk method to transform each node in the attack graph into a feature vector and apply the KMeans clustering algorithm to group similar nodes into clusters.  
+- Employ the TrustRank algorithm to analyze asset nodes and determine the importance of each asset within the system.  
+- Allocate limited security resources to the incoming edges of each asset, guided by cluster-level risk normalization and asset-level rank normalization.  
+- Assess SAG-ERC across four systems and compare its performance with four baseline resource allocation methods.  
+
 
 
