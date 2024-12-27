@@ -94,11 +94,9 @@ Note: all of these datasets are stored in the project directory and is called dy
 
 **Note**: The benefits of our defense strategies apply across different security budgets.
 
-# Comparison of AARA-PR and baseline systems on all datasets
+# A Comparison (based on relative reduction in expected cost \(CR \%\)) between SAG-ERC and four baseline algorithms.
 
 The row "Measurements" show the relative difference of the expected cost $CR$ for all defense scenarios. The larger $CR$, the better the defense method with significance level equals 0.05 for the Friedman test.
-
-**A Comparison (based on relative reduction in expected cost \(CR \%\)) between SAG-ERC and four baseline algorithms.**
 
 **SAG-ERC yields superior performance with the highest mean rank and highest relative reduction in expected cost.**
 
