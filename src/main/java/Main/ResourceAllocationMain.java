@@ -137,7 +137,7 @@ public class ResourceAllocationMain implements StoreAllocationResults.org.SaveRA
                     concurrentAttacks,
                     assetLossVec,
                     resources);
-            SAG_ERC.call_SIS_RA(map, 100);
+            SAG_ERC.call_SAG_ERC(map, 100);
             headers[4] = "SAG-ERC";
             scoresRow[4] = SAG_ERC.getExpectedCostReduction();
             mapAllocationMethodToRelativeCostReduction.put(headers[4], scoresRow[4]);
