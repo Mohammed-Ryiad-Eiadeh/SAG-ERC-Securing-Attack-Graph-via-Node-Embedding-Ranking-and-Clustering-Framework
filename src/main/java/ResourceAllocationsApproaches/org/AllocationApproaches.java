@@ -235,7 +235,7 @@ public class AllocationApproaches {
         ExpectedCostReduction = Math.abs(costsBeforeAllocation - costsAfterAllocation) / costsBeforeAllocation * 100;
     }
 
-    public void call_SIS_RA(HashMap<Integer, ArrayList<Integer>> clusterToNodeMapper, int numOfIteration) {
+    public void call_SAG_ERC(HashMap<Integer, ArrayList<Integer>> clusterToNodeMapper, int numOfIteration) {
         // Select the test case or the graph; construct the defenders; construct the adjacency matrix; display the graph.
         GraphData graphTask = task;
         Defenders[][] defendersMatrix = deepCopy(DefendersMatrix);
