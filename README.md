@@ -7,7 +7,7 @@ This paper introduces a security framework for these interdependent systems mana
 # Framework
 Our proposed framework, SAG-ERC, addresses resource allocation challenges in interdependent systems. It leverages attack graphs by focusing on entry nodes (attackers’ access points) and critical asset nodes (defender’s targets). Using a Genetic Algorithm (GA), SAG-ERC identifies the most likely attack paths between entry and asset nodes, evaluating them based on potential asset losses and associated risks. Feature vectors for nodes are then generated using a random walk node embedding technique, enabling K-Means clustering to group nodes with similar properties. The severity of risk for each cluster is normalized to guide the defender's security budget allocation. SAG-ERC integrates TrustRank to rank nodes, prioritizing critical assets and ensuring proportional resource distribution across incoming edges. In summary, the framework strategically secures critical assets by optimizing resource allocation across the attack graph.
 
-![Screenshot (22)](https://github.com/user-attachments/assets/d13e0ab9-dca2-4a79-8aae-42831ca33f24)
+![Screenshot (23)](https://github.com/user-attachments/assets/561009c2-785f-4596-9acd-591bdf565191)
 
 # Fitness Function
 $F_2(P) = \max_{P \in P_m} \big(\exp\big(-\sum_{(v_i,v_j)\in P} {x_{i,j}}\big) + Wf\sum_{v_m\in P} L_m\big).$
