@@ -137,14 +137,10 @@ This study introduces a new resource allocation strategy for interdependent syst
 
 [14] G. Modelo-Howard, S. Bagchi, and G. Lebanon. 2008. Determining placement of intrusion detectors for a distributed application through bayesian network modeling. In International Workshop on Recent Advances in Intrusion Detection. Springer, 271–290.
 
-# Contact With Authors
+# Contact With The Developer
 
-Send email to the following authors for any question about this work, and it is our pleasure to ansawer your question.
+Send email to the following developer for any question about this work, and it is my pleasure to ansawer your question.
 
 Mohammad Aleiadeh, mraleiad@iu.edu or maleiade@purdue.edu
-
-dr. Mustafa Abdallah, mabdall@iu.edu or abdalla0@purdue.edu
-
-Note: Authors are arranged alphabetically.
 
 
