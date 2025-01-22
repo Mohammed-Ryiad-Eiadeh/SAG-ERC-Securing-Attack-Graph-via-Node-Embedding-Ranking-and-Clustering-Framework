@@ -142,6 +142,7 @@ This study introduces a new resource allocation strategy for interdependent syst
 Send email to the following Authors for any question about this work, and it is our pleasure to ansawer your question.
 
 Mohammad Aleiadeh, maleiade@purdue.edu
+
 Mustafa Abdallah, abdalla0@purdue.edu
 
 
